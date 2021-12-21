@@ -1,21 +1,29 @@
-.wrapper.background {
+
+html {
     height: 100%;
     width: 100%;
     background-color: #797a9e;
-    overflow: auto;
+    background-image: url("images/topography.svg");
 }
 html,body {
-    height: 100%;
-    width: 100%;
     margin: 0;
     box-sizing: content-box;
-    font-family:'EB Garamond', serif;
+    font-family: 'Miltonian Tattoo', cursive; 
 }
 
 .image-container {
     height: 400px;
     width: 350px;
-    position: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #797a9e; 
+    border-radius: 50%;
+}
+
+.image-container > .picture {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -28,19 +36,12 @@ html,body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #797a9e;
-    box-shadow: inset 0 0 45px 8px;
+    box-shadow: inset 0 0 45px 8px; 
     border-radius: 50%;
-}
-
-html:hover .picture{
     animation: picture-switch 12s linear;
-    animation-iteration-count: 20;
+    animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-delay: 5s;
 }
 
 .faded {
@@ -66,41 +67,158 @@ html:hover .picture{
     height: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .box {
-    width: 15em;
+    width: 18em;
     height: 15em;
-    margin: 50px 100px;
-    background-color: #9893DA;
-    border-radius: 20%;
+    margin: 30px 80px;
     z-index: 1;
 }
 
-/* .box ul {
-    margin: 20px;
-} */
+.box-content {
+    width: 100%;
+    height: 100%;
+    background-color: #9893DA;
+    border-radius: 20%;
+    display:flex;
+    align-items:center;
+}
+
+.box-content ul > h3 {
+    margin-top:0;
+}
+
+.box.face {
+    display: none;
+    height: 400px;
+    width: 350px;
+    background-color:#797a9e;
+    border-radius: 50%;
+}
+
+.head-line {
+    height: 50px;
+    width: 100%;
+    background: url(images/rip.svg) bottom center;
+    background-size: 50%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 2em;
+    font-family: 'Frijole', cursive;
+    margin-bottom: 30px;
+}
 
 .flex-grid ul {
+    margin: 0;
+}
+
+#no-bullet {
     list-style-type: none;
 }
 
 .flex-grid li {
-    line-height: 30px;
+    font-family: 'Calligraffitti', cursive;
+    font-size: larger;
 }
 
-.faq  ul {
-    transform: rotate(12deg) translate(10%, 20%);
+@media screen and (min-width: 1344px) {
+    .box {
+        width: 20em;
+        height: 18em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .box {
+        margin: 40px 140px;
+    }
+    .flex-grid li {
+        font-family: 'Calligraffitti', cursive;
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .box {
+        margin: 40px 250px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .head-line {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    .box {
+        width: 65%;
+        height: 18em;
+        margin: 40px 15%;
+    }
+    .head-line {
+        font-size: 20px;
+    }
+    .image-container {
+        display: none;
+    }
+
+    .box.face {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box.face .picture {
+        border-collapse: separate;
+        border-radius: 50%;
+        color: #797a9e;;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .head-line {
+        font-size: 15px;
+    }
+    .box {
+        width: 80%;
+        margin: 40px 10%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .box li {
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .head-line {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .head-line {
+        font-size: 10px;
+    }
+}
+
+/* .faq  {
+    transform: rotate(12deg) translate(0%, 0%);
 }
 .do  ul {
-    transform: rotate(-16deg) translate(-5%, 23%);
+    transform: rotate(-16deg) translate(3%, -3%);
 }
 .talk-about  ul {
     transform: rotate(-24deg) translate(3%, 5%);
 }
 .looking-for ul {
-    transform: rotate(17deg) translate(10%, 20%);
-}
+    transform: rotate(17deg) translate(5%, 5%);
+} */
 
 @keyframes picture-switch {
     0% { 
@@ -110,7 +228,7 @@ html:hover .picture{
         background-image: url('images/silas-burger.png');
     }
     60% {
-        opacity: 80%;
+        opacity: 100%;
         background-image: url('images/rithm-113.jpg');
     }
     100% {
@@ -119,6 +237,14 @@ html:hover .picture{
     }
 }
 
+/* 
+font-family: 'Calligraffitti', cursive;
+font-family: 'EB Garamond', serif;
+font-family: 'Germania One', cursive;
+font-family: 'Miltonian Tattoo', cursive; 
+font-family: 'Rock 3D', cursive;
+font-family: 'Shadows Into Light', cursive;
+*/
 
 /* 
 
