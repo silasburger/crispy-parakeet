@@ -208,20 +208,7 @@ html,body {
     }
 }
 
-/* .faq  {
-    transform: rotate(12deg) translate(0%, 0%);
-}
-.do  ul {
-    transform: rotate(-16deg) translate(3%, -3%);
-}
-.talk-about  ul {
-    transform: rotate(-24deg) translate(3%, 5%);
-}
-.looking-for ul {
-    transform: rotate(17deg) translate(5%, 5%);
-} */
-
-@keyframes picture-switch {
+/* @keyframes picture-switch {
     0% { 
         background-image: url('images/silas-burger.jpg');
     }
@@ -236,7 +223,7 @@ html,body {
         opacity: 0%;
         background-image: url('images/silas-burger.png');
     }
-}
+} */
 
 /* 
 font-family: 'Calligraffitti', cursive;
