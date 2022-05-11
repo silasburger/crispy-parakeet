@@ -38,7 +38,7 @@ html,body {
     background-size: cover;
     box-shadow: inset 0 0 45px 8px; 
     border-radius: 50%;
-    animation: picture-switch 12s linear;
+    animation: picture-switch 30s linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-delay: 5s;
@@ -209,22 +209,21 @@ html,body {
 }
 
 
-/* @keyframes picture-switch {
+@keyframes picture-switch {
     0% { 
         background-image: url('images/silas-burger.jpg');
-    }
-    30% {
-        background-image: url('images/silas-burger.png');
+        opacity: 100%;
     }
     60% {
+        opacity: 0%;
+    }
+    80% { 
         opacity: 100%;
-        background-image: url('images/rithm-113.jpg');
     }
     100% {
         opacity: 0%;
-        background-image: url('images/silas-burger.png');
     }
-} */
+} 
 
 /* 
 font-family: 'Calligraffitti', cursive;
